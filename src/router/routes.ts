@@ -4,6 +4,7 @@ import type { RouteObject } from "react-router";
 import DefaultLayout from "../layouts/DefaultLayout";
 import Home from "../pages/Home";
 import Users from "../pages/Settings/Users";
+import Roles from "../pages/Settings/Roles";
 
 const routes: RouteObject[] = [
   {
@@ -16,6 +17,10 @@ const routes: RouteObject[] = [
       {
         path: "settings/users",
         Component: Users
+      },
+      {
+        path: "settings/roles",
+        Component: Roles
       }
     ]
   }

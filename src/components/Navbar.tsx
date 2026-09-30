@@ -1,4 +1,6 @@
+// src/components/Navbar.tsx
 import {
+  Avatar,
   Box,
   Code,
   Collapse,
@@ -14,7 +16,7 @@ import type { Icon } from "@tabler/icons-react";
 import { useLocation, useNavigate } from "react-router";
 
 import { Logo } from "./Logo";
-import classes from "./Navbar.module.css";
+import classes from "./Navbar.module.scss";
 
 interface MenuLink {
   label: string;
@@ -41,6 +43,10 @@ const menuItems: MenuItem[] = [
       {
         label: "使用者管理",
         path: "/settings/users"
+      },
+      {
+        label: "角色管理",
+        path: "/settings/roles"
       }
     ]
   }
@@ -128,6 +134,32 @@ const LinksGroup = ({ item }: LinksGroupProps) => {
   );
 };
 
+export function UserButton() {
+  return (
+    <UnstyledButton className={classes.user}>
+      <Group>
+        <Avatar
+          src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-8.png"
+          radius="xl"
+          alt="Harriette Spoonlicker"
+        />
+
+        <div style={{ flex: 1 }}>
+          <Text size="sm" fw={500}>
+            Harriette Spoonlicker
+          </Text>
+
+          <Text c="dimmed" size="xs">
+            hspoonlicker@outlook.com
+          </Text>
+        </div>
+
+        <IconChevronRight size={14} stroke={1.5} />
+      </Group>
+    </UnstyledButton>
+  );
+}
+
 const Navbar = () => {
   return (
     <nav className={classes.navbar}>
@@ -145,6 +177,10 @@ const Navbar = () => {
           ))}
         </div>
       </ScrollArea>
+
+      <div className={classes.footer}>
+        <UserButton />
+      </div>
     </nav>
   );
 };
