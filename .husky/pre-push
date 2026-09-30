@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+echo "🔍 執行推送前型別檢查..."
+
+if ! npm run type-check; then
+  echo "❌ 型別檢查失敗，請修正後再推送。"
+  exit 1
+fi
+
+echo "✅ 型別檢查通過！"

@@ -10,10 +10,10 @@ const routes: RouteObject[] = [
     children: [
       {
         index: true,
-        Component: Home,
-      },
-    ],
-  },
+        Component: Home
+      }
+    ]
+  }
 ];
 
 export default routes;

@@ -5,7 +5,7 @@ import useAuthStore from "@/stores/auth";
 
 const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
-  timeout: 30000,
+  timeout: 30000
 });
 
 /**
@@ -32,11 +32,11 @@ apiClient.interceptors.response.use(
     notifications.show({
       color: "red",
       title: "錯誤",
-      message: "系統發生錯誤，請稍後再試",
+      message: "系統發生錯誤，請稍後再試"
     });
 
     return Promise.reject(error);
-  },
+  }
 );
 
 export default apiClient;
