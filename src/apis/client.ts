@@ -1,7 +1,7 @@
 // src/apis/client.ts
 import { notifications } from "@mantine/notifications";
 import axios from "axios";
-import useAuthStore from "@/stores/auth";
+import useAuthStore from "../stores/auth";
 
 const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,

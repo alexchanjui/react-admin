@@ -9,11 +9,6 @@
     "allowArbitraryExtensions": true,
     "skipLibCheck": true,
 
-    /* Path Alias */
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,

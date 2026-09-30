@@ -1,14 +1,20 @@
 // src/layouts/DefaultLayout.tsx
 import { Outlet } from "react-router";
+import Navbar from "../components/Navbar";
+import classes from "./DefaultLayout.module.css";
 
 const DefaultLayout = () => {
   return (
-    <div>
-      <header>Header</header>
+    <div className={classes.layout}>
+      <Navbar />
 
-      <main>
-        <Outlet />
-      </main>
+      <div className={classes.content}>
+        <header className={classes.header}>Header</header>
+
+        <main className={classes.main}>
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 };
